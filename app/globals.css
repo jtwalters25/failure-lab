@@ -1,0 +1,75 @@
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --surface-2: #f2f0eb;
+  --text: #161614;
+  --text-2: #55534e;
+  --border: rgba(22, 22, 20, 0.12);
+  --accent: #2a78d6;
+  --cap: #8a8780;
+  --outage: rgba(227, 73, 72, 0.1);
+  --warn-bg: #faeeda; --warn: #854f0b;
+  --good-bg: #e3f2e1; --good: #27500a;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141413; --surface: #1d1d1b; --surface-2: #262624;
+    --text: #f0efec; --text-2: #b8b6ad; --border: rgba(255, 255, 255, 0.12);
+    --accent: #5a9ae8; --cap: #8a8780; --outage: rgba(230, 103, 103, 0.14);
+    --warn-bg: #4a3206; --warn: #f5cc85; --good-bg: #1f3a12; --good: #b9de95;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 560px; margin: 0 auto; padding: 32px 16px 48px; }
+section, footer { margin-top: 40px; }
+h1 { font-size: 28px; line-height: 1.2; margin: 0 0 12px; font-weight: 600; letter-spacing: -0.01em; }
+h2 { font-size: 20px; margin: 0 0 8px; font-weight: 600; }
+.lede { color: var(--text-2); margin: 0; }
+.fine { color: var(--text-2); font-size: 14px; margin: 8px 0 0; }
+.note { margin: 12px 0 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+button, .button {
+  font: inherit; font-size: 15px; color: var(--text); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 10px; padding: 12px 10px; min-height: 48px;
+  cursor: pointer; text-align: center; text-decoration: none; display: block;
+}
+button[aria-pressed="true"] { border: 2px solid var(--accent); color: var(--accent); font-weight: 600; }
+.choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.choices button:last-child { grid-column: 1 / -1; }
+
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 16px 0; }
+.stat { background: var(--surface-2); border-radius: 10px; padding: 12px 14px; }
+.stat .label { font-size: 13px; color: var(--text-2); }
+.stat .value { font-size: 26px; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+svg .load { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; }
+svg .cap { stroke: var(--cap); stroke-width: 1.5; stroke-dasharray: 5 4; }
+svg .axis { stroke: var(--border); }
+svg .outage { fill: var(--outage); }
+svg .tick { fill: var(--text-2); font-size: 10px; }
+
+.findings { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; margin-top: 16px; }
+details { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+summary { cursor: pointer; list-style: none; display: grid; gap: 2px; }
+summary::-webkit-details-marker { display: none; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.repo { font-family: var(--mono); font-size: 13px; color: var(--text-2); }
+.title { font-weight: 600; }
+.badge { font-size: 12px; padding: 2px 8px; border-radius: 6px; white-space: nowrap; }
+.badge.warn { background: var(--warn-bg); color: var(--warn); }
+.badge.good { background: var(--good-bg); color: var(--good); }
+.badge.muted { background: var(--surface-2); color: var(--text-2); }
+details p { margin: 12px 0 0; }
+.takeaway { color: var(--text-2); font-size: 15px; }
+pre { background: var(--surface-2); border-radius: 8px; padding: 12px; overflow-x: auto; font-size: 12px; line-height: 1.5; margin: 12px 0 0; }
+code { font-family: var(--mono); }
+details a { display: inline-block; margin-top: 12px; color: var(--accent); font-size: 15px; }
+
+footer { border-top: 1px solid var(--border); padding-top: 24px; }
+.me { display: flex; align-items: center; gap: 12px; }
+.avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--surface-2); display: grid; place-items: center; font-weight: 600; }
+.name { font-weight: 600; }
+.links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
