@@ -1,8 +1,7 @@
-// TODO: confirm name, one-liner, and LinkedIn URL before AfroTech.
 export const profile = {
-  name: "Jeremiah",
+  name: "Jeremiah Walters",
   initials: "JW",
   oneLiner: "Reliability at scale, end to end",
-  linkedin: "https://www.linkedin.com/",
-  source: "https://github.com/",
+  linkedin: "https://www.linkedin.com/in/jeremiahwalters",
+  source: "https://github.com/jtwalters25/retry-storm",
 };
