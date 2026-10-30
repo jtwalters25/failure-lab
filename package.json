@@ -1,5 +1,5 @@
 {
-  "name": "retry-storm",
+  "name": "failure-lab",
   "private": true,
   "type": "module",
   "scripts": {
