@@ -13,6 +13,53 @@ export type Finding = {
 
 export const findings: Finding[] = [
   {
+    repo: "Netflix/spectator",
+    title: "Smart retry policy, one fast path",
+    verdict: "pattern",
+    summary:
+      "The default policy is idempotency-aware: writes only retry on connection failures, and 429 or 503 responses back off exponentially. But other 5xx responses on GET, and connection failures, retry immediately with no delay.",
+    takeaway:
+      "It also never reads the Retry-After header, which the simulator above shows recovers fastest. Small change, big effect when a dependency is struggling.",
+    snippet: `if (shouldRetry && (s == 429 || s == 503)) {
+  // Request is getting throttled, exponentially back off
+  // - 429 client sending too many requests
+  // - 503 server unavailable
+  try {
+    long delay = initialRetryDelay << (attempt - 1);
+    LOGGER.debug("request throttled, delaying for {}ms: {} {}", delay, method, uri);
+    Thread.sleep(delay);
+  } catch (InterruptedException e) {
+    Thread.currentThread().interrupt();
+    throw new IOException("request failed " + method + " " + uri, e);
+  }
+} else if (!shouldRetry) {
+  return response;
+}`,
+    url: "https://github.com/Netflix/spectator/blob/e2a90ec0d08e2eeae5062dd6a76b336d26d1051e/spectator-ext-ipc/src/main/java/com/netflix/spectator/ipc/http/HttpRequestBuilder.java#L276-L307",
+  },
+  {
+    repo: "Netflix/EVCache",
+    title: "Backpressure that fails fast",
+    verdict: "done-well",
+    summary:
+      "When a cache node's write queue is full, the client waits briefly a few times, then drops the write and records a metric instead of blocking forever.",
+    takeaway: "Bounded waiting plus load shedding is the right shape. A cache write is cheaper to lose than a stuck caller thread.",
+    snippet: `while (true) {
+    final int size = evcNode.getWriteQueueSize();
+    final boolean canAddToOpQueue = size < maxWriteQueueSize;
+    // (debug logging omitted)
+    if (canAddToOpQueue) break;
+    try {
+        Thread.sleep(writeBlock.get());
+    } catch (InterruptedException e) {
+        throw new EVCacheException("Thread was Interrupted", e);
+    }
+
+    if(i++ > 3) {
+        incrementFailure(EVCacheMetricsFactory.WRITE_QUEUE_FULL, call);`,
+    url: "https://github.com/Netflix/EVCache/blob/64c7a35f7be31b72b83277b1d07a0530fce1f34b/evcache-core/src/main/java/com/netflix/evcache/pool/EVCacheClient.java#L280-L300",
+  },
+  {
     repo: "Netflix/conductor",
     title: "Retry any exception, fixed 500ms",
     verdict: "pattern",

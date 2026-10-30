@@ -1,0 +1,56 @@
+rules:
+  - id: sleep-in-catch
+    languages: [java]
+    severity: WARNING
+    message: Thread.sleep inside a catch block. Fixed-delay retry with no jitter can synchronize clients into a retry storm.
+    pattern: |
+      try { ... } catch ($T $EX) { ... Thread.sleep(...); ... }
+
+  - id: sleep-in-retry-loop
+    languages: [java]
+    severity: WARNING
+    message: Thread.sleep inside a loop that also catches exceptions. Looks like a hand-rolled retry; check for backoff, jitter and a cap.
+    patterns:
+      - pattern-either:
+          - pattern: |
+              while (...) { ... try { ... } catch (...) { ... } ... Thread.sleep(...); ... }
+          - pattern: |
+              for (...) { ... try { ... } catch (...) { ... } ... Thread.sleep(...); ... }
+
+  - id: swallowed-interrupt
+    languages: [java]
+    severity: INFO
+    message: InterruptedException caught and not re-interrupted. Shutdown and cancellation signals get lost.
+    patterns:
+      - pattern: |
+          try { ... } catch (InterruptedException $EX) { $...BODY }
+      - pattern-not: |
+          try { ... } catch (InterruptedException $EX) { ... Thread.currentThread().interrupt(); ... }
+      - pattern-not: |
+          try { ... } catch (InterruptedException $EX) { ... throw ...; }
+
+  - id: python-sleep-in-except
+    languages: [python]
+    severity: WARNING
+    message: time.sleep inside an except block. Fixed-delay retry with no jitter.
+    pattern: |
+      try:
+          ...
+      except $E:
+          ...
+          time.sleep(...)
+
+  - id: go-sleep-in-retry-loop
+    languages: [go]
+    severity: WARNING
+    message: time.Sleep inside a loop that checks err. Hand-rolled retry; check for backoff, jitter and a cap.
+    pattern: |
+      for ... {
+          ...
+          if $ERR != nil {
+              ...
+              time.Sleep(...)
+              ...
+          }
+          ...
+      }
