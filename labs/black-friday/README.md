@@ -1,10 +1,20 @@
 # Black Friday reliability lab
 
-This first slice exercises **real local HTTP traffic** against two .NET 10 services. `Lab.Catalog` is a small, eShop-compatible catalog read sample with a 20-per-second capacity gate. `Lab.Shopper` makes that read using one Polly retry pipeline. k6 issues one logical operation per iteration, with no retry of its own. The services emit OpenTelemetry traces, metrics, and logs; the runner also saves structured local counters and k6 summaries.
+Imagine a storefront at the start of a sale. Catalog traffic rises faster than the service can handle, so it returns `429`. The question is what shoppers do next: retry together on a fixed interval, spread out with jitter, or follow the server's `Retry-After` instruction. This lab makes that question measurable on your own machine.
 
-The [implementation plan](docs/implementation-plan.md) records the incremental scope and the [pinned upstream guide](docs/upstream-eshop.md) explains how to replace the catalog sample with a locally run public eShop catalog. The first slice does not measure full eShop's database, broker, checkout, or identity behavior.
+There is no new storefront UI in this slice. The original [Next.js simulator](../../README.md) is the visual introduction. Aspire supplies a local dashboard for traces and metrics, while each k6 run produces a Markdown comparison of real HTTP results.
 
-## Setup
+## Walk through the system
+
+Start at the boundary: `Lab.Catalog` admits 20 reads per second. A shopper request enters `Lab.Shopper`, which makes the catalog call through a single Polly retry pipeline. When the gate fills, the catalog sends `429` and `Retry-After`. That header estimates the next refill; it does not reserve a place for any shopper.
+
+The client budget is the control. Every policy gets four total attempts, one second per attempt, and five seconds for the logical operation. k6 does not retry, so any extra backend load comes from the shopper policy. The runner restarts both services for each policy, rotates their order across trials, and offers the same 50 normal, 900 spike, and 100 recovery requests. It checks for dropped work and requires at least 95% success in normal and recovery phases.
+
+Read the report as a tradeoff. Compare logical success, p95 latency, attempts per request, and backend throttles for each phase. In the initial three local trials, `Retry-After` raised spike success to about 39% from about 35% for fixed and jitter, and reduced attempts per request from roughly 3.4 to 3.2. Its spike p95 was about 3.3 seconds, versus 0.4–0.6 seconds for the other policies. Quick failures can make latency look good, so the report keeps success and latency separate. These observations describe the bounded sample, not a universal policy ranking.
+
+The next boundary is realism. This sample isolates retry behavior; it does not measure eShop's database, broker, identity, or checkout behavior. The [pinned upstream guide](docs/upstream-eshop.md) describes using a locally controlled real eShop catalog, and the [implementation plan](docs/implementation-plan.md) lists the next increments.
+
+## Run the walkthrough
 
 Install the .NET 10 SDK (10.0.403 or a later patch in that feature band), k6 2.3.0, Python 3.10+, and Node 22+ for the existing Next.js demo. The .NET project uses `global.json` and committed NuGet lock files. No container runtime is needed for the sample. Run from this directory:
 
