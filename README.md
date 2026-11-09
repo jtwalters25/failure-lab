@@ -17,4 +17,4 @@ Why do outages get worse after they're fixed? A simulator of what happens after 
 
 ## 2. Local Black Friday reliability lab
 
-[`labs/black-friday/README.md`](labs/black-friday/README.md) contains a runnable .NET 10 catalog sample, an Aspire host with OpenTelemetry, k6 normal/spike/recovery scenarios, and a repeatable comparison of fixed retry, exponential jitter, and HTTP `Retry-After`. This is an additive local experiment; the original simulator above remains unchanged.
+Start with the [Black Friday walkthrough](labs/black-friday/README.md): a shopper hits a capacity-limited local catalog, and you compare fixed retry, exponential jitter, and HTTP `Retry-After` under normal traffic, a spike, and recovery. The original simulator above is the visual demo; the .NET lab uses Aspire's local telemetry dashboard and generates a comparison report.
