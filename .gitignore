@@ -3,3 +3,12 @@ node_modules
 next-env.d.ts
 *.tsbuildinfo
 .vercel
+
+# Local reliability lab outputs and external upstream checkout
+**/bin/
+**/obj/
+**/TestResults/
+**/__pycache__/
+labs/black-friday/results/
+labs/black-friday/.deps/
+labs/black-friday/.aspire/
