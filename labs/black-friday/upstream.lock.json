@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/dotnet/eShop.git",
+  "commit": "913acea66708a59595351174cee9b29f37179d29",
+  "catalogProject": "src/Catalog.API/Catalog.API.csproj",
+  "sdk": "10.0.302",
+  "aspireAppHostSdk": "13.6.0",
+  "endpoint": "/api/catalog/items?api-version=1.0&pageSize=10&pageIndex=0",
+  "note": "Optional external dependency. The default runnable target is the catalog sample, not upstream eShop."
+}

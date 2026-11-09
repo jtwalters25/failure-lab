@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <ProjectReference Include="../Lab.Core/Lab.Core.csproj" />
+    <ProjectReference Include="../Lab.ServiceDefaults/Lab.ServiceDefaults.csproj" />
+  </ItemGroup>
+</Project>

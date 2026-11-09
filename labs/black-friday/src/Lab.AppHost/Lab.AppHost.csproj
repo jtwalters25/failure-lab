@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Sdk Name="Aspire.AppHost.Sdk" Version="13.6.4" />
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <!-- This small host uses the pinned NuGet dashboard/DCP distribution, not CLI-only features. -->
+    <AspireUseCliBundle>false</AspireUseCliBundle>
+    <NoWarn>$(NoWarn);ASPIRE010</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" />
+    <ProjectReference Include="../Lab.Catalog/Lab.Catalog.csproj" />
+    <ProjectReference Include="../Lab.Shopper/Lab.Shopper.csproj" />
+  </ItemGroup>
+</Project>

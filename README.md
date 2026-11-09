@@ -14,3 +14,7 @@ Why do outages get worse after they're fixed? A simulator of what happens after 
 ## Running it
 
 `npm install && npm run dev`. Deploys to Vercel as a static page with no configuration.
+
+## 2. Local Black Friday reliability lab
+
+[`labs/black-friday/README.md`](labs/black-friday/README.md) contains a runnable .NET 10 catalog sample, an Aspire host with OpenTelemetry, k6 normal/spike/recovery scenarios, and a repeatable comparison of fixed retry, exponential jitter, and HTTP `Retry-After`. This is an additive local experiment; the original simulator above remains unchanged.
