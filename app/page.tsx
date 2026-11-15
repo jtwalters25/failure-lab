@@ -1,4 +1,4 @@
-import { Simulator } from "@/components/Simulator";
+import { Lab } from "@/components/Lab";
 import { Findings } from "@/components/Findings";
 import { profile } from "@/content/profile";
 
@@ -10,7 +10,7 @@ export default function Page() {
         <p className="lede">A service goes down for 10 seconds. Pick how its clients retry, and watch what happens after it comes back.</p>
       </header>
 
-      <Simulator />
+      <Lab />
 
       <Findings />
 

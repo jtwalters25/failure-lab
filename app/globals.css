@@ -73,3 +73,12 @@ footer { border-top: 1px solid var(--border); padding-top: 24px; }
 .avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--surface-2); display: grid; place-items: center; font-weight: 600; }
 .name { font-weight: 600; }
 .links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
+
+h3 { font-size: 16px; margin: 24px 0 0; font-weight: 600; }
+.replay { display: grid; gap: 8px; margin-top: 24px; padding: 12px 14px; border: 2px solid var(--accent); border-radius: 10px; }
+.replay button { min-height: 44px; }
+.replay-btn { display: inline-block; min-height: 44px; padding: 8px 14px; margin-top: 12px; color: var(--accent); font-weight: 600; }
+.outages { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+.outages li { display: grid; gap: 4px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+.outages a.title { color: var(--text); }
+.outages .replay-btn { margin-top: 0; }

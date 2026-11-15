@@ -38,3 +38,15 @@ test("healthy service before the outage is never overloaded", () => {
     for (const r of runs(s)) assert.ok(Math.max(...r.load.slice(0, 20)) <= CAPACITY);
   }
 });
+
+test("after a 60 second outage, backoff + jitter never recovers but Retry-After drains with zero failures", () => {
+  for (let i = 1; i <= 100; i++) {
+    const b = simulate("backoff", rng(i), 60);
+    const ra = simulate("retryAfter", rng(i), 60);
+    assert.equal(b.clearedSeconds, null);
+    assert.ok(b.failedRequests > 1000, `backoff failed ${b.failedRequests}`);
+    assert.equal(ra.failedRequests, 0);
+    assert.notEqual(ra.clearedSeconds, null);
+    assert.ok(Math.max(...ra.load.slice(ra.outageEnd)) <= CAPACITY);
+  }
+});

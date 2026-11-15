@@ -18,6 +18,7 @@ export type SimResult = {
   capacity: number[];
   clearedSeconds: number | null; // seconds after the outage until the backlog is gone; null = never
   failedRequests: number; // requests that gave up after MAX_ATTEMPTS
+  outageEnd: number; // second the service came back
 };
 
 // Small seeded PRNG (mulberry32) so runs are reproducible in tests.
@@ -51,8 +52,11 @@ function retryAt(s: Strategy, t: number, attempt: number, slots: number[], rand:
   }
 }
 
-export function simulate(s: Strategy, rand: () => number = Math.random): SimResult {
-  const horizon = DURATION + 2000;
+export function simulate(s: Strategy, rand: () => number = Math.random, outageSeconds = OUTAGE_END - OUTAGE_START): SimResult {
+  const outageEnd = OUTAGE_START + outageSeconds;
+  // Long outages pile up a bigger backlog, so give recovery room to play out.
+  const duration = Math.max(DURATION, outageEnd + Math.max(90, 2 * outageSeconds));
+  const horizon = duration + 2000;
   const retries: number[][] = Array.from({ length: horizon }, () => []); // attempt numbers due at second t
   const slots: number[] = new Array(horizon).fill(0);
   const load: number[] = [];
@@ -61,8 +65,8 @@ export function simulate(s: Strategy, rand: () => number = Math.random): SimResu
   let failed = 0;
   let clearedSeconds: number | null = null;
 
-  for (let t = 0; t < DURATION; t++) {
-    const cap = t >= OUTAGE_START && t < OUTAGE_END ? 0 : CAPACITY;
+  for (let t = 0; t < duration; t++) {
+    const cap = t >= OUTAGE_START && t < outageEnd ? 0 : CAPACITY;
     // New requests: ARRIVAL_RATE +/- 5 so the line isn't perfectly flat.
     const fresh = ARRIVAL_RATE + Math.round((rand() - 0.5) * 10);
     const arriving = [...Array<number>(fresh).fill(0), ...retries[t]];
@@ -86,10 +90,10 @@ export function simulate(s: Strategy, rand: () => number = Math.random): SimResu
     }
     load.push(a);
     capacity.push(cap);
-    if (clearedSeconds === null && t >= OUTAGE_END && served === a && pending === 0) {
-      clearedSeconds = t - OUTAGE_END;
+    if (clearedSeconds === null && t >= outageEnd && served === a && pending === 0) {
+      clearedSeconds = t - outageEnd;
     }
   }
 
-  return { load, capacity, clearedSeconds, failedRequests: failed };
+  return { load, capacity, clearedSeconds, failedRequests: failed, outageEnd };
 }
