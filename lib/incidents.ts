@@ -52,6 +52,31 @@ export function toOutage(provider: string, inc: StatusIncident): Outage | null {
   };
 }
 
+// Google Cloud publishes its own format (status.cloud.google.com/incidents.json).
+// It has no "monitoring" stage, so there is no fix-to-resolved tail.
+export type GoogleIncident = {
+  begin: string;
+  end?: string | null;
+  external_desc: string;
+  uri?: string;
+  severity?: string;
+};
+
+export function toOutageFromGoogle(inc: GoogleIncident): Outage | null {
+  if (!inc.end) return null;
+  const outageMinutes = minutes(inc.begin, inc.end);
+  if (outageMinutes <= 0) return null;
+  return {
+    provider: "Google Cloud",
+    name: inc.external_desc,
+    url: inc.uri ? `https://status.cloud.google.com/${inc.uri.replace(/^\//, "")}` : null,
+    impact: inc.severity ?? "unknown",
+    startedAt: inc.begin,
+    outageMinutes,
+    tailMinutes: null,
+  };
+}
+
 export function median(values: number[]): number | null {
   if (values.length === 0) return null;
   const v = [...values].sort((a, b) => a - b);

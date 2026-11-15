@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { toOutage, median, formatMinutes, type StatusIncident } from "./incidents.ts";
+import { toOutage, toOutageFromGoogle, median, formatMinutes, type StatusIncident } from "./incidents.ts";
 
 const base: StatusIncident = {
   name: "Degraded API",
@@ -52,4 +52,12 @@ test("median and formatting", () => {
   assert.equal(formatMinutes(45), "45 min");
   assert.equal(formatMinutes(120), "2 h");
   assert.equal(formatMinutes(355), "5 h 55 min");
+});
+
+test("Google Cloud incidents: begin to end, no tail, link to the dashboard; open incidents skipped", () => {
+  const g = toOutageFromGoogle({ begin: "2026-11-01T10:00:00+00:00", end: "2026-11-01T12:30:00+00:00", external_desc: "Elevated errors", uri: "incidents/abc123", severity: "high" })!;
+  assert.equal(g.outageMinutes, 150);
+  assert.equal(g.tailMinutes, null);
+  assert.equal(g.url, "https://status.cloud.google.com/incidents/abc123");
+  assert.equal(toOutageFromGoogle({ begin: "2026-11-01T10:00:00+00:00", end: null, external_desc: "Ongoing" }), null);
 });

@@ -18,13 +18,13 @@ export function RealOutages({ onReplay }: { onReplay: (r: Replay) => void }) {
         Status pages don&apos;t publish request rates, so the simulator can&apos;t reproduce these incidents. They do publish how long each outage lasted. Replay one to watch an outage that long play out, one real minute per simulated second.
       </p>
 
-      <h3>From Microsoft Azure&apos;s public incident reviews</h3>
+      <h3>From the cloud providers&apos; own incident reviews</h3>
       <div className="findings">
         {scenarios.map((s) => (
           <details key={s.id}>
             <summary>
               <span className="row">
-                <span className="repo">{day(s.date)}</span>
+                <span className="repo">{s.provider}, {day(s.date)}</span>
                 <span className="badge muted">{s.approx ? "about " : ""}{formatMinutes(s.outageMinutes)}</span>
               </span>
               <span className="title">{s.name}</span>
@@ -49,7 +49,7 @@ export function RealOutages({ onReplay }: { onReplay: (r: Replay) => void }) {
 
       <h3>Recently on public status pages</h3>
       {live.length === 0 ? (
-        <p className="fine">Live data refreshes daily from public status pages. The first refresh hasn&apos;t run yet.</p>
+        <p className="fine">Live data refreshes daily from Google Cloud&apos;s and other public status pages. The first refresh hasn&apos;t run yet.</p>
       ) : (
         <>
           {medianTail !== null && (
@@ -82,7 +82,7 @@ export function RealOutages({ onReplay }: { onReplay: (r: Replay) => void }) {
             ))}
           </ul>
           <p className="fine">
-            &quot;Fix to resolved&quot; runs from the first &quot;monitoring&quot; update to &quot;resolved&quot;. Part of it is backlog draining, part is how carefully a team waits before closing, so treat it as a hint, not a measurement. Sources: {incidents.sources.join(", ")}. Last {incidents.days} days, updated {incidents.updatedAt ? day(incidents.updatedAt) : "never"}.
+            &quot;Fix to resolved&quot; runs from the first &quot;monitoring&quot; update to &quot;resolved&quot;. Part of it is backlog draining, part is how carefully a team waits before closing, so treat it as a hint, not a measurement. Google Cloud posts no monitoring stage, so its incidents show no tail. AWS and Azure publish no incident history feed, so they appear above as written reviews only. Sources: {incidents.sources.join(", ")}. Last {incidents.days} days, updated {incidents.updatedAt ? day(incidents.updatedAt) : "never"}.
           </p>
         </>
       )}
