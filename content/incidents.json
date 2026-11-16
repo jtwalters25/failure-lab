@@ -1,6 +1,148 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-11-16T23:25:55.233Z",
   "days": 90,
-  "sources": [],
-  "outages": []
+  "sources": [
+    "Google Cloud",
+    "GitHub",
+    "Cloudflare",
+    "Anthropic",
+    "Twilio"
+  ],
+  "outages": [
+    {
+      "provider": "Cloudflare",
+      "name": "Network Performance Issues in Montreal, Canada",
+      "url": "https://www.cloudflarestatus.com/incidents/wscmdyvmpb5d",
+      "impact": "minor",
+      "startedAt": "2026-11-16T20:10:00.000Z",
+      "outageMinutes": 30,
+      "tailMinutes": null
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays from a Subset of Twilio Short Codes to T-Mobile United States",
+      "url": "https://stspg.io/55ccdvwhfkvc",
+      "impact": "minor",
+      "startedAt": "2026-11-16T09:36:27.922-08:00",
+      "outageMinutes": 141,
+      "tailMinutes": 125
+    },
+    {
+      "provider": "Twilio",
+      "name": "Customers Cannot Load Marketplace Plugins From 1 Console",
+      "url": "https://stspg.io/x07f654tlfxb",
+      "impact": "minor",
+      "startedAt": "2026-11-16T09:08:33.000-08:00",
+      "outageMinutes": 121,
+      "tailMinutes": 60
+    },
+    {
+      "provider": "Twilio",
+      "name": "Conversation Intelligence V3 Results Are Not Currently Available",
+      "url": "https://stspg.io/820608plgv6f",
+      "impact": "minor",
+      "startedAt": "2026-11-16T08:53:40.000-08:00",
+      "outageMinutes": 135,
+      "tailMinutes": 59
+    },
+    {
+      "provider": "Twilio",
+      "name": "Voice Call Audio Quality Degradation between Twilio and Multiple Networks in United Kingdom",
+      "url": "https://stspg.io/pw8k3ggksfkk",
+      "impact": "minor",
+      "startedAt": "2026-11-16T07:43:09.892-08:00",
+      "outageMinutes": 266,
+      "tailMinutes": 122
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Errors creating predictions for some models",
+      "url": "https://www.cloudflarestatus.com/incidents/69855o2zz6kl",
+      "impact": "minor",
+      "startedAt": "2026-11-16T14:30:20.417Z",
+      "outageMinutes": 109,
+      "tailMinutes": 26
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays from Twilio to Telenor Pakistan",
+      "url": "https://stspg.io/3bhbmryq7v78",
+      "impact": "minor",
+      "startedAt": "2026-11-16T05:21:39.759-08:00",
+      "outageMinutes": 498,
+      "tailMinutes": 401
+    },
+    {
+      "provider": "GitHub",
+      "name": "Incident with Pull Requests",
+      "url": "https://stspg.io/ljtn69jlt087",
+      "impact": "minor",
+      "startedAt": "2026-11-16T11:59:40.892Z",
+      "outageMinutes": 267,
+      "tailMinutes": 19
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays from Twilio to MTN/Libertis Congo",
+      "url": "https://stspg.io/gwr6sqmydqhj",
+      "impact": "minor",
+      "startedAt": "2026-11-16T03:09:54.859-08:00",
+      "outageMinutes": 477,
+      "tailMinutes": 366
+    },
+    {
+      "provider": "Anthropic",
+      "name": "Elevated errors for Claude Sonnet 5.5 and Claude Fable 5.2",
+      "url": "https://stspg.io/n18qjkd7dt4q",
+      "impact": "major",
+      "startedAt": "2026-11-16T07:49:55.052Z",
+      "outageMinutes": 75,
+      "tailMinutes": 62
+    },
+    {
+      "provider": "Twilio",
+      "name": "Silent Network Authentication (SNA) Missing Redirects in Philippines",
+      "url": "https://stspg.io/3mvdqmzcv5bn",
+      "impact": "minor",
+      "startedAt": "2026-11-15T18:16:24.786-08:00",
+      "outageMinutes": 963,
+      "tailMinutes": 178
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Failures from a Subset of Twilio Long Codes to Multiple Networks in Canada",
+      "url": "https://stspg.io/2znd7yhz48jq",
+      "impact": "minor",
+      "startedAt": "2026-11-15T15:08:26.497-08:00",
+      "outageMinutes": 250,
+      "tailMinutes": 135
+    },
+    {
+      "provider": "Twilio",
+      "name": "Inbound MMS Failures",
+      "url": "https://stspg.io/3g8zphc51q03",
+      "impact": "minor",
+      "startedAt": "2026-11-15T15:02:45.004-08:00",
+      "outageMinutes": 95,
+      "tailMinutes": null
+    },
+    {
+      "provider": "Twilio",
+      "name": "Gateway API (Lookup API) Failure Increase in United States",
+      "url": "https://stspg.io/ntcnsrjy4bfd",
+      "impact": "minor",
+      "startedAt": "2026-11-15T06:18:41.532-08:00",
+      "outageMinutes": 227,
+      "tailMinutes": 30
+    },
+    {
+      "provider": "Twilio",
+      "name": "New Twilio Accounts Experiencing Email Product Provisioning Delays",
+      "url": "https://stspg.io/ctpwkwqyqn2g",
+      "impact": "minor",
+      "startedAt": "2026-11-15T05:16:11.187-08:00",
+      "outageMinutes": 156,
+      "tailMinutes": 90
+    }
+  ]
 }
