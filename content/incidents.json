@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T22:28:27.380Z",
+  "updatedAt": "2026-11-18T22:03:56.801Z",
   "days": 90,
   "sources": [
     "Google Cloud",
@@ -11,138 +11,138 @@
   "outages": [
     {
       "provider": "Twilio",
+      "name": "Text to Speech Timeouts",
+      "url": "https://stspg.io/d1r9gpwlrh7f",
+      "impact": "minor",
+      "startedAt": "2026-11-18T08:17:26.000-08:00",
+      "outageMinutes": 274,
+      "tailMinutes": 31
+    },
+    {
+      "provider": "Twilio",
+      "name": "Transactional Email Delays in AP",
+      "url": "https://stspg.io/7qxlj4zfnw3x",
+      "impact": "minor",
+      "startedAt": "2026-11-18T06:05:04.497-08:00",
+      "outageMinutes": 57,
+      "tailMinutes": 44
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "R2 Downloads Stalling in Japan",
+      "url": "https://www.cloudflarestatus.com/incidents/2wjvsj2kqt07",
+      "impact": "minor",
+      "startedAt": "2026-11-18T13:45:19.653Z",
+      "outageMinutes": 78,
+      "tailMinutes": 23
+    },
+    {
+      "provider": "Twilio",
+      "name": "Voice Call Failures from a Subset of Twilio phone numbers in Brasil",
+      "url": "https://stspg.io/qzs4df6dd2y1",
+      "impact": "minor",
+      "startedAt": "2026-11-18T03:44:38.585-08:00",
+      "outageMinutes": 47,
+      "tailMinutes": 14
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays and Failures from a Subset of Twilio Short Codes to Bell and Bell Aliant Canada",
+      "url": "https://stspg.io/zx1wggcfj96c",
+      "impact": "minor",
+      "startedAt": "2026-11-18T02:35:58.896-08:00",
+      "outageMinutes": 255,
+      "tailMinutes": 93
+    },
+    {
+      "provider": "GitHub",
+      "name": "Degraded Availability for MAI Code 2 Flash in Copilot",
+      "url": "https://stspg.io/3sbmvyy2ctyx",
+      "impact": "minor",
+      "startedAt": "2026-11-18T09:00:12.799Z",
+      "outageMinutes": 34,
+      "tailMinutes": 21
+    },
+    {
+      "provider": "Twilio",
+      "name": "Speech Recognition and Real-Time Transcription Failures in US1",
+      "url": "https://stspg.io/251l66kh1mjb",
+      "impact": "minor",
+      "startedAt": "2026-11-18T00:07:51.951-08:00",
+      "outageMinutes": 168,
+      "tailMinutes": 102
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Network disruption across multiple colocations in India",
+      "url": "https://www.cloudflarestatus.com/incidents/njt9j3k2zdfw",
+      "impact": "minor",
+      "startedAt": "2026-11-18T08:04:29.058Z",
+      "outageMinutes": 42,
+      "tailMinutes": 9
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Network Performance Issues in North America",
+      "url": "https://www.cloudflarestatus.com/incidents/76lqmua6x3tk",
+      "impact": "minor",
+      "startedAt": "2026-11-18T07:00:00.000Z",
+      "outageMinutes": 180,
+      "tailMinutes": null
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Network Performance Issues in Paris",
+      "url": "https://www.cloudflarestatus.com/incidents/k3r9i5tbre4i",
+      "impact": "minor",
+      "startedAt": "2026-11-18T03:39:01.643Z",
+      "outageMinutes": 72,
+      "tailMinutes": 54
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Elevated 5xx error rates and latency in Mumbai",
+      "url": "https://www.cloudflarestatus.com/incidents/pi6wgeh78wsn",
+      "impact": "minor",
+      "startedAt": "2026-11-18T02:31:00.000Z",
+      "outageMinutes": 33,
+      "tailMinutes": null
+    },
+    {
+      "provider": "Anthropic",
+      "name": "Elevated errors affecting the Google Docs connector",
+      "url": "https://stspg.io/qz7tfhb7sl68",
+      "impact": "minor",
+      "startedAt": "2026-11-18T01:13:15.164Z",
+      "outageMinutes": 31,
+      "tailMinutes": 4
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Cloudflare Access Issue",
+      "url": "https://www.cloudflarestatus.com/incidents/0jozucwnpzy0",
+      "impact": "minor",
+      "startedAt": "2026-11-18T01:10:14.795Z",
+      "outageMinutes": 90,
+      "tailMinutes": 29
+    },
+    {
+      "provider": "Twilio",
+      "name": "Programmable Messaging API Errors",
+      "url": "https://stspg.io/99crblr7y0h8",
+      "impact": "minor",
+      "startedAt": "2026-11-17T15:52:38.518-08:00",
+      "outageMinutes": 52,
+      "tailMinutes": 52
+    },
+    {
+      "provider": "Twilio",
       "name": "Voice Call Signing Issues",
       "url": "https://stspg.io/2jx91mzrpkrl",
       "impact": "minor",
       "startedAt": "2026-11-17T14:03:20.101-08:00",
       "outageMinutes": 14,
       "tailMinutes": null
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "R2 elevated errors and timeouts for requests from South America",
-      "url": "https://www.cloudflarestatus.com/incidents/gcn9xop0f7zm",
-      "impact": "minor",
-      "startedAt": "2026-11-17T20:05:29.548Z",
-      "outageMinutes": 123,
-      "tailMinutes": 75
-    },
-    {
-      "provider": "Anthropic",
-      "name": "Some users unable to sign in with Apple on claude.ai and the Claude iOS app",
-      "url": "https://stspg.io/3tl6h35nnzwm",
-      "impact": "major",
-      "startedAt": "2026-11-17T18:55:53.493Z",
-      "outageMinutes": 175,
-      "tailMinutes": null
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Network performance issues in Los Angeles (LAX) and Frankfurt (FRA) datacenters",
-      "url": "https://www.cloudflarestatus.com/incidents/du63c25qjgjs",
-      "impact": "minor",
-      "startedAt": "2026-11-17T17:12:37.707Z",
-      "outageMinutes": 47,
-      "tailMinutes": 4
-    },
-    {
-      "provider": "Twilio",
-      "name": "SMS Delivery Failures Between a Subset of Twilio Short Codes and Claro in Brazil",
-      "url": "https://stspg.io/21g9xj3zy77c",
-      "impact": "minor",
-      "startedAt": "2026-11-17T07:55:15.834-08:00",
-      "outageMinutes": 334,
-      "tailMinutes": 122
-    },
-    {
-      "provider": "Twilio",
-      "name": "Customers Unable to View Balance in Console",
-      "url": "https://stspg.io/hylf885jv77y",
-      "impact": "minor",
-      "startedAt": "2026-11-17T06:32:03.816-08:00",
-      "outageMinutes": 6,
-      "tailMinutes": null
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Elevated number of 5xx and 499 errors",
-      "url": "https://www.cloudflarestatus.com/incidents/1ip2m5rvk7vb",
-      "impact": "minor",
-      "startedAt": "2026-11-17T13:55:00.000Z",
-      "outageMinutes": 40,
-      "tailMinutes": null
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Cloudflare One Gateway traffic unable to connect to Cloudflare domains that are regionalized",
-      "url": "https://www.cloudflarestatus.com/incidents/tawn3zx7wh0z",
-      "impact": "minor",
-      "startedAt": "2026-11-17T13:54:19.030Z",
-      "outageMinutes": 63,
-      "tailMinutes": 13
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Turnstile verification failures",
-      "url": "https://www.cloudflarestatus.com/incidents/5831aw44ia7i",
-      "impact": "minor",
-      "startedAt": "2026-11-17T10:24:59.409Z",
-      "outageMinutes": 372,
-      "tailMinutes": null
-    },
-    {
-      "provider": "Twilio",
-      "name": "SMS Delivery Delays from Twilio to Sky United Kingdom",
-      "url": "https://stspg.io/m3pfs1bgrnlp",
-      "impact": "minor",
-      "startedAt": "2026-11-17T01:32:25.915-08:00",
-      "outageMinutes": 299,
-      "tailMinutes": 74
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Elevated number of 52x origin connectivity errors in Seoul",
-      "url": "https://www.cloudflarestatus.com/incidents/1nqok7v173qg",
-      "impact": "minor",
-      "startedAt": "2026-11-17T04:50:00.000Z",
-      "outageMinutes": 60,
-      "tailMinutes": null
-    },
-    {
-      "provider": "Twilio",
-      "name": "Gateway API (Lookup API) Failure Increase in Canada",
-      "url": "https://stspg.io/h7mprlrghyfl",
-      "impact": "minor",
-      "startedAt": "2026-11-16T17:44:01.542-08:00",
-      "outageMinutes": 239,
-      "tailMinutes": 128
-    },
-    {
-      "provider": "Twilio",
-      "name": "SMS Delivery Delays from a Subset of Twilio Short Codes to Liberty Mobile Puerto Rico",
-      "url": "https://stspg.io/gdzn0chlbhb2",
-      "impact": "minor",
-      "startedAt": "2026-11-16T17:12:49.401-08:00",
-      "outageMinutes": 1187,
-      "tailMinutes": 363
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Network Performance Issues in Montreal, Canada",
-      "url": "https://www.cloudflarestatus.com/incidents/wscmdyvmpb5d",
-      "impact": "minor",
-      "startedAt": "2026-11-16T20:10:00.000Z",
-      "outageMinutes": 30,
-      "tailMinutes": null
-    },
-    {
-      "provider": "Twilio",
-      "name": "SMS Delivery Delays from a Subset of Twilio Short Codes to T-Mobile United States",
-      "url": "https://stspg.io/55ccdvwhfkvc",
-      "impact": "minor",
-      "startedAt": "2026-11-16T09:36:27.922-08:00",
-      "outageMinutes": 141,
-      "tailMinutes": 125
     }
   ]
 }
