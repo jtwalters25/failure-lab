@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T22:03:56.801Z",
+  "updatedAt": "2026-11-19T22:14:18.742Z",
   "days": 90,
   "sources": [
     "Google Cloud",
@@ -9,6 +9,96 @@
     "Twilio"
   ],
   "outages": [
+    {
+      "provider": "GitHub",
+      "name": "Disruption with some GitHub services",
+      "url": "https://stspg.io/pvjz2g01trc7",
+      "impact": "minor",
+      "startedAt": "2026-11-19T17:06:26.800Z",
+      "outageMinutes": 71,
+      "tailMinutes": 34
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Observability ingestion delay and query failures",
+      "url": "https://www.cloudflarestatus.com/incidents/ljrvdciu7syf",
+      "impact": "minor",
+      "startedAt": "2026-11-19T16:30:04.141Z",
+      "outageMinutes": 326,
+      "tailMinutes": 32
+    },
+    {
+      "provider": "GitHub",
+      "name": "Degraded availability for GPT-6 Luna in Copilot",
+      "url": "https://stspg.io/vv0kzmyd9wqs",
+      "impact": "minor",
+      "startedAt": "2026-11-19T15:56:02.723Z",
+      "outageMinutes": 41,
+      "tailMinutes": 8
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Durable Objects and D1 – Increased Errors",
+      "url": "https://www.cloudflarestatus.com/incidents/5pe5mb9fefi8",
+      "impact": "minor",
+      "startedAt": "2026-11-19T13:05:04.488Z",
+      "outageMinutes": 32,
+      "tailMinutes": null
+    },
+    {
+      "provider": "Anthropic",
+      "name": "Elevated errors for Claude Mythos 5.2 and Claude Fable 5.2",
+      "url": "https://stspg.io/nlb5fptv28h5",
+      "impact": "major",
+      "startedAt": "2026-11-19T09:10:24.807Z",
+      "outageMinutes": 23,
+      "tailMinutes": 10
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Cloudflare Access Issue",
+      "url": "https://www.cloudflarestatus.com/incidents/sd2sya0mc6df",
+      "impact": "minor",
+      "startedAt": "2026-11-19T06:48:06.017Z",
+      "outageMinutes": 128,
+      "tailMinutes": 24
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays from Twilio to ISP Telecom United States",
+      "url": "https://stspg.io/3n02kzlgh2fw",
+      "impact": "minor",
+      "startedAt": "2026-11-18T19:46:53.232-08:00",
+      "outageMinutes": 577,
+      "tailMinutes": 364
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Degraded connectivity between Europe and Asia Pacific",
+      "url": "https://www.cloudflarestatus.com/incidents/f33c51cw0ojd",
+      "impact": "minor",
+      "startedAt": "2026-11-18T22:26:41.943Z",
+      "outageMinutes": 293,
+      "tailMinutes": 163
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Increased latency on Analytics API (GraphQL) queries",
+      "url": "https://www.cloudflarestatus.com/incidents/9zpa7own49hb",
+      "impact": "minor",
+      "startedAt": "2026-11-18T20:35:12.303Z",
+      "outageMinutes": 167,
+      "tailMinutes": 162
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Failures from a Subset of Twilio Phone Numbers to Zong Pakistan",
+      "url": "https://stspg.io/ds65pdrjsl9s",
+      "impact": "minor",
+      "startedAt": "2026-11-18T08:18:34.970-08:00",
+      "outageMinutes": 483,
+      "tailMinutes": 122
+    },
     {
       "provider": "Twilio",
       "name": "Text to Speech Timeouts",
@@ -53,96 +143,6 @@
       "startedAt": "2026-11-18T02:35:58.896-08:00",
       "outageMinutes": 255,
       "tailMinutes": 93
-    },
-    {
-      "provider": "GitHub",
-      "name": "Degraded Availability for MAI Code 2 Flash in Copilot",
-      "url": "https://stspg.io/3sbmvyy2ctyx",
-      "impact": "minor",
-      "startedAt": "2026-11-18T09:00:12.799Z",
-      "outageMinutes": 34,
-      "tailMinutes": 21
-    },
-    {
-      "provider": "Twilio",
-      "name": "Speech Recognition and Real-Time Transcription Failures in US1",
-      "url": "https://stspg.io/251l66kh1mjb",
-      "impact": "minor",
-      "startedAt": "2026-11-18T00:07:51.951-08:00",
-      "outageMinutes": 168,
-      "tailMinutes": 102
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Network disruption across multiple colocations in India",
-      "url": "https://www.cloudflarestatus.com/incidents/njt9j3k2zdfw",
-      "impact": "minor",
-      "startedAt": "2026-11-18T08:04:29.058Z",
-      "outageMinutes": 42,
-      "tailMinutes": 9
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Network Performance Issues in North America",
-      "url": "https://www.cloudflarestatus.com/incidents/76lqmua6x3tk",
-      "impact": "minor",
-      "startedAt": "2026-11-18T07:00:00.000Z",
-      "outageMinutes": 180,
-      "tailMinutes": null
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Network Performance Issues in Paris",
-      "url": "https://www.cloudflarestatus.com/incidents/k3r9i5tbre4i",
-      "impact": "minor",
-      "startedAt": "2026-11-18T03:39:01.643Z",
-      "outageMinutes": 72,
-      "tailMinutes": 54
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Elevated 5xx error rates and latency in Mumbai",
-      "url": "https://www.cloudflarestatus.com/incidents/pi6wgeh78wsn",
-      "impact": "minor",
-      "startedAt": "2026-11-18T02:31:00.000Z",
-      "outageMinutes": 33,
-      "tailMinutes": null
-    },
-    {
-      "provider": "Anthropic",
-      "name": "Elevated errors affecting the Google Docs connector",
-      "url": "https://stspg.io/qz7tfhb7sl68",
-      "impact": "minor",
-      "startedAt": "2026-11-18T01:13:15.164Z",
-      "outageMinutes": 31,
-      "tailMinutes": 4
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Cloudflare Access Issue",
-      "url": "https://www.cloudflarestatus.com/incidents/0jozucwnpzy0",
-      "impact": "minor",
-      "startedAt": "2026-11-18T01:10:14.795Z",
-      "outageMinutes": 90,
-      "tailMinutes": 29
-    },
-    {
-      "provider": "Twilio",
-      "name": "Programmable Messaging API Errors",
-      "url": "https://stspg.io/99crblr7y0h8",
-      "impact": "minor",
-      "startedAt": "2026-11-17T15:52:38.518-08:00",
-      "outageMinutes": 52,
-      "tailMinutes": 52
-    },
-    {
-      "provider": "Twilio",
-      "name": "Voice Call Signing Issues",
-      "url": "https://stspg.io/2jx91mzrpkrl",
-      "impact": "minor",
-      "startedAt": "2026-11-17T14:03:20.101-08:00",
-      "outageMinutes": 14,
-      "tailMinutes": null
     }
   ]
 }
