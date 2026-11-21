@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T21:51:56.691Z",
+  "updatedAt": "2026-11-21T20:34:34.072Z",
   "days": 90,
   "sources": [
     "Google Cloud",
@@ -9,6 +9,33 @@
     "Twilio"
   ],
   "outages": [
+    {
+      "provider": "Twilio",
+      "name": "Twilio Help Center Chat Creation and Retrieval Failures",
+      "url": "https://stspg.io/spcg4b2l7fhg",
+      "impact": "minor",
+      "startedAt": "2026-11-20T14:23:54.446-08:00",
+      "outageMinutes": 93,
+      "tailMinutes": 32
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Network Performance Issues in Washington, DC datacenter (IAD)",
+      "url": "https://www.cloudflarestatus.com/incidents/oz6to8yacrxe",
+      "impact": "minor",
+      "startedAt": "2026-11-20T20:35:16.792Z",
+      "outageMinutes": 669,
+      "tailMinutes": 667
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Receipt Delays from a Subset of Twilio Phone Numbers to CTBC Brazil",
+      "url": "https://stspg.io/5xn9c5l36hbq",
+      "impact": "minor",
+      "startedAt": "2026-11-20T11:53:26.249-08:00",
+      "outageMinutes": 314,
+      "tailMinutes": 132
+    },
     {
       "provider": "Cloudflare",
       "name": "Cloudflare Dashboard and Cloudflare API service issues in EU region",
@@ -116,33 +143,6 @@
       "startedAt": "2026-11-19T09:10:24.807Z",
       "outageMinutes": 23,
       "tailMinutes": 10
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Cloudflare Access Issue",
-      "url": "https://www.cloudflarestatus.com/incidents/sd2sya0mc6df",
-      "impact": "minor",
-      "startedAt": "2026-11-19T06:48:06.017Z",
-      "outageMinutes": 128,
-      "tailMinutes": 24
-    },
-    {
-      "provider": "Twilio",
-      "name": "SMS Delivery Delays from Twilio to ISP Telecom United States",
-      "url": "https://stspg.io/3n02kzlgh2fw",
-      "impact": "minor",
-      "startedAt": "2026-11-18T19:46:53.232-08:00",
-      "outageMinutes": 577,
-      "tailMinutes": 364
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Degraded connectivity between Europe and Asia Pacific",
-      "url": "https://www.cloudflarestatus.com/incidents/f33c51cw0ojd",
-      "impact": "minor",
-      "startedAt": "2026-11-18T22:26:41.943Z",
-      "outageMinutes": 293,
-      "tailMinutes": 163
     }
   ]
 }
