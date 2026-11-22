@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T20:34:34.072Z",
+  "updatedAt": "2026-11-22T20:45:06.566Z",
   "days": 90,
   "sources": [
     "Google Cloud",
@@ -9,6 +9,15 @@
     "Twilio"
   ],
   "outages": [
+    {
+      "provider": "Cloudflare",
+      "name": "Network Performance Issues in Chicago datacenter (ORD)",
+      "url": "https://www.cloudflarestatus.com/incidents/d2m4kw94ut4f",
+      "impact": "minor",
+      "startedAt": "2026-11-22T00:32:59.263Z",
+      "outageMinutes": 39,
+      "tailMinutes": 28
+    },
     {
       "provider": "Twilio",
       "name": "Twilio Help Center Chat Creation and Retrieval Failures",
@@ -134,15 +143,6 @@
       "startedAt": "2026-11-19T13:05:04.488Z",
       "outageMinutes": 32,
       "tailMinutes": null
-    },
-    {
-      "provider": "Anthropic",
-      "name": "Elevated errors for Claude Mythos 5.2 and Claude Fable 5.2",
-      "url": "https://stspg.io/nlb5fptv28h5",
-      "impact": "major",
-      "startedAt": "2026-11-19T09:10:24.807Z",
-      "outageMinutes": 23,
-      "tailMinutes": 10
     }
   ]
 }
