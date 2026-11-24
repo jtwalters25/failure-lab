@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T20:45:06.566Z",
+  "updatedAt": "2026-11-24T01:43:40.693Z",
   "days": 90,
   "sources": [
     "Google Cloud",
@@ -9,6 +9,69 @@
     "Twilio"
   ],
   "outages": [
+    {
+      "provider": "Twilio",
+      "name": "Intermittent 403 Errors at the Email and Programmable Messaging APIs",
+      "url": "https://stspg.io/zmn4n7p9kjtg",
+      "impact": "minor",
+      "startedAt": "2026-11-23T14:17:34.896-08:00",
+      "outageMinutes": 125,
+      "tailMinutes": null
+    },
+    {
+      "provider": "Twilio",
+      "name": "Email Authentication Errors Affecting Mail Send",
+      "url": "https://stspg.io/m0r4pj2z77m1",
+      "impact": "minor",
+      "startedAt": "2026-11-23T10:16:45.000-08:00",
+      "outageMinutes": 151,
+      "tailMinutes": 98
+    },
+    {
+      "provider": "Anthropic",
+      "name": "Elevated errors for multiple models",
+      "url": "https://stspg.io/q2ptbwdjx31m",
+      "impact": "major",
+      "startedAt": "2026-11-23T09:49:22.296Z",
+      "outageMinutes": 78,
+      "tailMinutes": 60
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays from a Subset of Twilio Long Codes to Cell C South Africa",
+      "url": "https://stspg.io/zj30ygk0tt90",
+      "impact": "minor",
+      "startedAt": "2026-11-22T23:04:31.140-08:00",
+      "outageMinutes": 445,
+      "tailMinutes": 47
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Increased HTTP 5xx Errors in Brussels",
+      "url": "https://www.cloudflarestatus.com/incidents/pnfv9wfy2q4y",
+      "impact": "minor",
+      "startedAt": "2026-11-23T02:34:56.549Z",
+      "outageMinutes": 11,
+      "tailMinutes": 11
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays from Twilio to Telekom Srbija Serbia",
+      "url": "https://stspg.io/ftmn1nwjd3f9",
+      "impact": "minor",
+      "startedAt": "2026-11-22T14:10:38.696-08:00",
+      "outageMinutes": 260,
+      "tailMinutes": 144
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays and Failures from Twilio to Telekom Germany",
+      "url": "https://stspg.io/n2v7hjb36sg2",
+      "impact": "minor",
+      "startedAt": "2026-11-22T07:55:48.929-08:00",
+      "outageMinutes": 380,
+      "tailMinutes": 298
+    },
     {
       "provider": "Cloudflare",
       "name": "Network Performance Issues in Chicago datacenter (ORD)",
@@ -80,69 +143,6 @@
       "startedAt": "2026-11-20T04:51:03.670-08:00",
       "outageMinutes": 420,
       "tailMinutes": 98
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Network Performance Issues in Miami",
-      "url": "https://www.cloudflarestatus.com/incidents/4lv21sf5fzhm",
-      "impact": "minor",
-      "startedAt": "2026-11-20T05:00:56.036Z",
-      "outageMinutes": 567,
-      "tailMinutes": null
-    },
-    {
-      "provider": "Cloudflare",
-      "name": " R2 and Durable Objects availability issues",
-      "url": "https://www.cloudflarestatus.com/incidents/pfwuex7qix27",
-      "impact": "minor",
-      "startedAt": "2026-11-20T02:52:58.155Z",
-      "outageMinutes": 102,
-      "tailMinutes": 32
-    },
-    {
-      "provider": "GitHub",
-      "name": "Disruption with some GitHub services",
-      "url": "https://stspg.io/pvjz2g01trc7",
-      "impact": "minor",
-      "startedAt": "2026-11-19T17:06:26.800Z",
-      "outageMinutes": 71,
-      "tailMinutes": 34
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Observability ingestion delay and query failures",
-      "url": "https://www.cloudflarestatus.com/incidents/ljrvdciu7syf",
-      "impact": "minor",
-      "startedAt": "2026-11-19T16:30:04.141Z",
-      "outageMinutes": 326,
-      "tailMinutes": 32
-    },
-    {
-      "provider": "GitHub",
-      "name": "Degraded availability for GPT-6 Luna in Copilot",
-      "url": "https://stspg.io/vv0kzmyd9wqs",
-      "impact": "minor",
-      "startedAt": "2026-11-19T15:56:02.723Z",
-      "outageMinutes": 41,
-      "tailMinutes": 8
-    },
-    {
-      "provider": "Twilio",
-      "name": "Voice Call Failures from a Subset of Twilio Phone Numbers to Argentina",
-      "url": "https://stspg.io/xpzbcfrc7bmy",
-      "impact": "minor",
-      "startedAt": "2026-11-19T07:15:43.293-08:00",
-      "outageMinutes": 458,
-      "tailMinutes": 26
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Durable Objects and D1 – Increased Errors",
-      "url": "https://www.cloudflarestatus.com/incidents/5pe5mb9fefi8",
-      "impact": "minor",
-      "startedAt": "2026-11-19T13:05:04.488Z",
-      "outageMinutes": 32,
-      "tailMinutes": null
     }
   ]
 }
