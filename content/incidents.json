@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T01:43:40.693Z",
+  "updatedAt": "2026-11-24T23:30:06.395Z",
   "days": 90,
   "sources": [
     "Google Cloud",
@@ -9,6 +9,60 @@
     "Twilio"
   ],
   "outages": [
+    {
+      "provider": "Anthropic",
+      "name": "Elevated errors for Claude Haiku 5.5",
+      "url": "https://stspg.io/n7769lzz1dvy",
+      "impact": "major",
+      "startedAt": "2026-11-24T17:19:31.942Z",
+      "outageMinutes": 31,
+      "tailMinutes": 23
+    },
+    {
+      "provider": "GitHub",
+      "name": "Degraded Availability for MAI Code 2 in Copilot",
+      "url": "https://stspg.io/d5wbprv122kh",
+      "impact": "minor",
+      "startedAt": "2026-11-24T13:44:07.205Z",
+      "outageMinutes": 30,
+      "tailMinutes": 9
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Issues with Email Routing in France",
+      "url": "https://www.cloudflarestatus.com/incidents/x5ma22sji8wi",
+      "impact": "minor",
+      "startedAt": "2026-11-24T13:38:40.144Z",
+      "outageMinutes": 544,
+      "tailMinutes": 38
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays and Failures from Twilio to Telekom Germany",
+      "url": "https://stspg.io/038c3lcnyw43",
+      "impact": "minor",
+      "startedAt": "2026-11-24T02:24:03.080-08:00",
+      "outageMinutes": 290,
+      "tailMinutes": 122
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Increased Errors for Durable Objects in Seattle",
+      "url": "https://www.cloudflarestatus.com/incidents/idlaxmxz4unz",
+      "impact": "minor",
+      "startedAt": "2026-11-24T07:25:34.236Z",
+      "outageMinutes": 61,
+      "tailMinutes": 19
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Receipt Delays from a Subset of Twilio Phone Numbers to Telstra Australia",
+      "url": "https://stspg.io/3b33tn8vdlk0",
+      "impact": "minor",
+      "startedAt": "2026-11-23T15:12:33.746-08:00",
+      "outageMinutes": 254,
+      "tailMinutes": 172
+    },
     {
       "provider": "Twilio",
       "name": "Intermittent 403 Errors at the Email and Programmable Messaging APIs",
@@ -26,6 +80,24 @@
       "startedAt": "2026-11-23T10:16:45.000-08:00",
       "outageMinutes": 151,
       "tailMinutes": 98
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays from a Subset of Twilio Long Codes to Vodacom South Africa",
+      "url": "https://stspg.io/91mvmds8qz4y",
+      "impact": "minor",
+      "startedAt": "2026-11-23T09:37:31.820-08:00",
+      "outageMinutes": 1258,
+      "tailMinutes": 121
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Cloudflare Workers API – Delayed or Inconsistent Responses",
+      "url": "https://www.cloudflarestatus.com/incidents/00dp7cliyqqt",
+      "impact": "minor",
+      "startedAt": "2026-11-23T13:52:11.144Z",
+      "outageMinutes": 1904,
+      "tailMinutes": 130
     },
     {
       "provider": "Anthropic",
@@ -71,78 +143,6 @@
       "startedAt": "2026-11-22T07:55:48.929-08:00",
       "outageMinutes": 380,
       "tailMinutes": 298
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Network Performance Issues in Chicago datacenter (ORD)",
-      "url": "https://www.cloudflarestatus.com/incidents/d2m4kw94ut4f",
-      "impact": "minor",
-      "startedAt": "2026-11-22T00:32:59.263Z",
-      "outageMinutes": 39,
-      "tailMinutes": 28
-    },
-    {
-      "provider": "Twilio",
-      "name": "Twilio Help Center Chat Creation and Retrieval Failures",
-      "url": "https://stspg.io/spcg4b2l7fhg",
-      "impact": "minor",
-      "startedAt": "2026-11-20T14:23:54.446-08:00",
-      "outageMinutes": 93,
-      "tailMinutes": 32
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Network Performance Issues in Washington, DC datacenter (IAD)",
-      "url": "https://www.cloudflarestatus.com/incidents/oz6to8yacrxe",
-      "impact": "minor",
-      "startedAt": "2026-11-20T20:35:16.792Z",
-      "outageMinutes": 669,
-      "tailMinutes": 667
-    },
-    {
-      "provider": "Twilio",
-      "name": "SMS Delivery Receipt Delays from a Subset of Twilio Phone Numbers to CTBC Brazil",
-      "url": "https://stspg.io/5xn9c5l36hbq",
-      "impact": "minor",
-      "startedAt": "2026-11-20T11:53:26.249-08:00",
-      "outageMinutes": 314,
-      "tailMinutes": 132
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Cloudflare Dashboard and Cloudflare API service issues in EU region",
-      "url": "https://www.cloudflarestatus.com/incidents/iysf3fasf7wn",
-      "impact": "major",
-      "startedAt": "2026-11-20T18:24:29.481Z",
-      "outageMinutes": 29,
-      "tailMinutes": 15
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Cache Purging Delays in Amsterdam",
-      "url": "https://www.cloudflarestatus.com/incidents/xsgbfncq7of7",
-      "impact": "minor",
-      "startedAt": "2026-11-20T18:00:33.128Z",
-      "outageMinutes": 101,
-      "tailMinutes": 1
-    },
-    {
-      "provider": "Twilio",
-      "name": "Subset of API Requests Blocked with 403 Response",
-      "url": "https://stspg.io/zhv1n1y942k1",
-      "impact": "minor",
-      "startedAt": "2026-11-20T09:06:44.118-08:00",
-      "outageMinutes": 50,
-      "tailMinutes": 15
-    },
-    {
-      "provider": "Twilio",
-      "name": "SMS Delivery Delays from Twilio to Proximus Belgium",
-      "url": "https://stspg.io/7t0sbbb66526",
-      "impact": "minor",
-      "startedAt": "2026-11-20T04:51:03.670-08:00",
-      "outageMinutes": 420,
-      "tailMinutes": 98
     }
   ]
 }
