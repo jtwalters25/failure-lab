@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T23:08:44.754Z",
+  "updatedAt": "2026-11-26T23:03:18.628Z",
   "days": 90,
   "sources": [
     "Google Cloud",
@@ -9,6 +9,105 @@
     "Twilio"
   ],
   "outages": [
+    {
+      "provider": "Cloudflare",
+      "name": "Cloudflare Dashboard and Cloudflare API service issues",
+      "url": "https://www.cloudflarestatus.com/incidents/xiqj67vl5pqm",
+      "impact": "major",
+      "startedAt": "2026-11-26T16:03:50.006Z",
+      "outageMinutes": 133,
+      "tailMinutes": 98
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays from Twilio to Multiple Networks in Bahrain",
+      "url": "https://stspg.io/krpzh4mqjsbl",
+      "impact": "minor",
+      "startedAt": "2026-11-26T07:46:20.337-08:00",
+      "outageMinutes": 225,
+      "tailMinutes": 126
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Workers AI - Deepseek Flash increased errors",
+      "url": "https://www.cloudflarestatus.com/incidents/6crqy1zulybd",
+      "impact": "minor",
+      "startedAt": "2026-11-26T14:41:21.826Z",
+      "outageMinutes": 1,
+      "tailMinutes": null
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "AI Gateway – Elevated errors for Gemini 4 models using Unified Billing",
+      "url": "https://www.cloudflarestatus.com/incidents/filussqshtfq",
+      "impact": "minor",
+      "startedAt": "2026-11-26T14:19:51.141Z",
+      "outageMinutes": 227,
+      "tailMinutes": 87
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Cloudflare Billing Issues",
+      "url": "https://www.cloudflarestatus.com/incidents/qlwszxx4667e",
+      "impact": "minor",
+      "startedAt": "2026-11-26T09:28:58.472Z",
+      "outageMinutes": 9,
+      "tailMinutes": 9
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "RealTimeKit Recording Delays",
+      "url": "https://www.cloudflarestatus.com/incidents/mkudgr09g9ax",
+      "impact": "minor",
+      "startedAt": "2026-11-26T09:26:11.090Z",
+      "outageMinutes": 39,
+      "tailMinutes": 1
+    },
+    {
+      "provider": "Twilio",
+      "name": "Voice Call Post Dial Delay and Failures Between a Subset of Twilio South Africa Phone Numbers and Network Subscribers",
+      "url": "https://stspg.io/0h9sgv6c925j",
+      "impact": "minor",
+      "startedAt": "2026-11-25T23:41:32.146-08:00",
+      "outageMinutes": 656,
+      "tailMinutes": 332
+    },
+    {
+      "provider": "Twilio",
+      "name": "Delay in Outbound SMS Send",
+      "url": "https://stspg.io/61290pdd6tbv",
+      "impact": "minor",
+      "startedAt": "2026-11-25T20:01:45.000-08:00",
+      "outageMinutes": 136,
+      "tailMinutes": 105
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays from Twilio to Spusu United Kingdom",
+      "url": "https://stspg.io/ymdrx1zttc6m",
+      "impact": "minor",
+      "startedAt": "2026-11-25T16:49:43.414-08:00",
+      "outageMinutes": 205,
+      "tailMinutes": 121
+    },
+    {
+      "provider": "GitHub",
+      "name": "LFS degradation for some customers",
+      "url": "https://stspg.io/ywpzwl4yl621",
+      "impact": "minor",
+      "startedAt": "2026-11-25T23:06:54.822Z",
+      "outageMinutes": 96,
+      "tailMinutes": 2
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Elevated R2 Latency",
+      "url": "https://www.cloudflarestatus.com/incidents/ef6928vi0mic",
+      "impact": "minor",
+      "startedAt": "2026-11-25T20:08:42.535Z",
+      "outageMinutes": 242,
+      "tailMinutes": 190
+    },
     {
       "provider": "Cloudflare",
       "name": "Elevated R2 errors for buckets in APAC region",
@@ -44,105 +143,6 @@
       "startedAt": "2026-11-25T06:49:12.530-08:00",
       "outageMinutes": 405,
       "tailMinutes": 114
-    },
-    {
-      "provider": "GitHub",
-      "name": "MAI Code 2 Degredation",
-      "url": "https://stspg.io/djn1brd9cmzj",
-      "impact": "minor",
-      "startedAt": "2026-11-25T11:58:36.144Z",
-      "outageMinutes": 5,
-      "tailMinutes": null
-    },
-    {
-      "provider": "Twilio",
-      "name": "SMS Delivery Delays from Twilio to Bouygues Telecom France",
-      "url": "https://stspg.io/6wckhw8p3c7q",
-      "impact": "minor",
-      "startedAt": "2026-11-25T02:13:57.454-08:00",
-      "outageMinutes": 766,
-      "tailMinutes": 565
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Firewall Configuration Delay",
-      "url": "https://www.cloudflarestatus.com/incidents/xufkpdtfdglk",
-      "impact": "minor",
-      "startedAt": "2026-11-25T07:24:35.866Z",
-      "outageMinutes": 107,
-      "tailMinutes": 15
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Elevated number of 5xx errors in Frankfurt",
-      "url": "https://www.cloudflarestatus.com/incidents/lqojvojhdcjv",
-      "impact": "minor",
-      "startedAt": "2026-11-25T02:35:00.000Z",
-      "outageMinutes": 10,
-      "tailMinutes": null
-    },
-    {
-      "provider": "GitHub",
-      "name": "Disruption with Code Completions and Next Edit Suggestions",
-      "url": "https://stspg.io/bk5200jsb13k",
-      "impact": "critical",
-      "startedAt": "2026-11-25T00:08:17.965Z",
-      "outageMinutes": 67,
-      "tailMinutes": null
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "R2 elevated errors and timeouts for requests from South America",
-      "url": "https://www.cloudflarestatus.com/incidents/k8utv1c3ubf2",
-      "impact": "minor",
-      "startedAt": "2026-11-24T21:54:25.621Z",
-      "outageMinutes": 138,
-      "tailMinutes": null
-    },
-    {
-      "provider": "Twilio",
-      "name": "KYC Onboarding Issues Affecting Voice Call Branding and Spam Labeling",
-      "url": "https://stspg.io/fpn8qm3pmhry",
-      "impact": "minor",
-      "startedAt": "2026-11-24T13:03:06.210-08:00",
-      "outageMinutes": 165,
-      "tailMinutes": 14
-    },
-    {
-      "provider": "Twilio",
-      "name": "Voice Call Failures from Twilio Phone Numbers to Ireland",
-      "url": "https://stspg.io/pcr7x9y24trq",
-      "impact": "minor",
-      "startedAt": "2026-11-24T10:41:18.408-08:00",
-      "outageMinutes": 565,
-      "tailMinutes": 362
-    },
-    {
-      "provider": "Anthropic",
-      "name": "Elevated errors for Claude Haiku 5.5",
-      "url": "https://stspg.io/n7769lzz1dvy",
-      "impact": "major",
-      "startedAt": "2026-11-24T17:19:31.942Z",
-      "outageMinutes": 31,
-      "tailMinutes": 23
-    },
-    {
-      "provider": "GitHub",
-      "name": "Degraded Availability for MAI Code 2 in Copilot",
-      "url": "https://stspg.io/d5wbprv122kh",
-      "impact": "minor",
-      "startedAt": "2026-11-24T13:44:07.205Z",
-      "outageMinutes": 30,
-      "tailMinutes": 9
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Issues with Email Routing in France",
-      "url": "https://www.cloudflarestatus.com/incidents/x5ma22sji8wi",
-      "impact": "minor",
-      "startedAt": "2026-11-24T13:38:40.144Z",
-      "outageMinutes": 544,
-      "tailMinutes": 38
     }
   ]
 }
