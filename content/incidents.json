@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T23:03:18.628Z",
+  "updatedAt": "2026-11-27T22:45:01.250Z",
   "days": 90,
   "sources": [
     "Google Cloud",
@@ -9,6 +9,87 @@
     "Twilio"
   ],
   "outages": [
+    {
+      "provider": "Twilio",
+      "name": "Issue Affecting Bulk Messaging and Twilio Email",
+      "url": "https://stspg.io/q3vwm7gqy658",
+      "impact": "minor",
+      "startedAt": "2026-11-27T10:23:24.082-08:00",
+      "outageMinutes": 171,
+      "tailMinutes": 35
+    },
+    {
+      "provider": "Twilio",
+      "name": "RCS Message Delivery Failures",
+      "url": "https://stspg.io/fqzbq2wdh05w",
+      "impact": "minor",
+      "startedAt": "2026-11-27T09:18:34.610-08:00",
+      "outageMinutes": 35,
+      "tailMinutes": null
+    },
+    {
+      "provider": "Cloudflare",
+      "name": "Cloudflare University website unavailable",
+      "url": "https://www.cloudflarestatus.com/incidents/955xa7dtx0ca",
+      "impact": "minor",
+      "startedAt": "2026-11-27T14:49:03.546Z",
+      "outageMinutes": 16,
+      "tailMinutes": null
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays from Twilio to Izzi Mexico",
+      "url": "https://stspg.io/xkkw0lh2ttmb",
+      "impact": "minor",
+      "startedAt": "2026-11-27T04:10:31.899-08:00",
+      "outageMinutes": 439,
+      "tailMinutes": 122
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays from Twilio to Vodafone and Tismi United Kingdom",
+      "url": "https://stspg.io/9q03b85kpbc1",
+      "impact": "minor",
+      "startedAt": "2026-11-27T03:23:46.643-08:00",
+      "outageMinutes": 442,
+      "tailMinutes": 242
+    },
+    {
+      "provider": "Anthropic",
+      "name": "Degraded performance for Claude Fable 5.2",
+      "url": "https://stspg.io/n4l14k7m49zw",
+      "impact": "major",
+      "startedAt": "2026-11-27T10:34:01.796Z",
+      "outageMinutes": 16,
+      "tailMinutes": 9
+    },
+    {
+      "provider": "Twilio",
+      "name": "MMS Delivery Delays from a Subset of Twilio Long Codes to GCI United States",
+      "url": "https://stspg.io/7hkn8yf0vc8x",
+      "impact": "minor",
+      "startedAt": "2026-11-26T18:20:41.288-08:00",
+      "outageMinutes": 748,
+      "tailMinutes": 164
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays from Twilio to OneNZ New Zealand",
+      "url": "https://stspg.io/bk5cbp5q1s8j",
+      "impact": "minor",
+      "startedAt": "2026-11-26T17:15:26.316-08:00",
+      "outageMinutes": 609,
+      "tailMinutes": 366
+    },
+    {
+      "provider": "Twilio",
+      "name": "SMS Delivery Delays from a Subset of Twilio Alphanumeric Sender IDs and Long Codes to AT&T Mexico",
+      "url": "https://stspg.io/x6c34mr50tbd",
+      "impact": "minor",
+      "startedAt": "2026-11-26T14:16:45.828-08:00",
+      "outageMinutes": 306,
+      "tailMinutes": 121
+    },
     {
       "provider": "Cloudflare",
       "name": "Cloudflare Dashboard and Cloudflare API service issues",
@@ -62,87 +143,6 @@
       "startedAt": "2026-11-26T09:26:11.090Z",
       "outageMinutes": 39,
       "tailMinutes": 1
-    },
-    {
-      "provider": "Twilio",
-      "name": "Voice Call Post Dial Delay and Failures Between a Subset of Twilio South Africa Phone Numbers and Network Subscribers",
-      "url": "https://stspg.io/0h9sgv6c925j",
-      "impact": "minor",
-      "startedAt": "2026-11-25T23:41:32.146-08:00",
-      "outageMinutes": 656,
-      "tailMinutes": 332
-    },
-    {
-      "provider": "Twilio",
-      "name": "Delay in Outbound SMS Send",
-      "url": "https://stspg.io/61290pdd6tbv",
-      "impact": "minor",
-      "startedAt": "2026-11-25T20:01:45.000-08:00",
-      "outageMinutes": 136,
-      "tailMinutes": 105
-    },
-    {
-      "provider": "Twilio",
-      "name": "SMS Delivery Delays from Twilio to Spusu United Kingdom",
-      "url": "https://stspg.io/ymdrx1zttc6m",
-      "impact": "minor",
-      "startedAt": "2026-11-25T16:49:43.414-08:00",
-      "outageMinutes": 205,
-      "tailMinutes": 121
-    },
-    {
-      "provider": "GitHub",
-      "name": "LFS degradation for some customers",
-      "url": "https://stspg.io/ywpzwl4yl621",
-      "impact": "minor",
-      "startedAt": "2026-11-25T23:06:54.822Z",
-      "outageMinutes": 96,
-      "tailMinutes": 2
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Elevated R2 Latency",
-      "url": "https://www.cloudflarestatus.com/incidents/ef6928vi0mic",
-      "impact": "minor",
-      "startedAt": "2026-11-25T20:08:42.535Z",
-      "outageMinutes": 242,
-      "tailMinutes": 190
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Elevated R2 errors for buckets in APAC region",
-      "url": "https://www.cloudflarestatus.com/incidents/2quqh864hxdi",
-      "impact": "minor",
-      "startedAt": "2026-11-25T16:50:45.239Z",
-      "outageMinutes": 193,
-      "tailMinutes": 160
-    },
-    {
-      "provider": "Cloudflare",
-      "name": "Some customers cannot create monitors",
-      "url": "https://www.cloudflarestatus.com/incidents/vk87u9j2g6if",
-      "impact": "minor",
-      "startedAt": "2026-11-25T16:42:03.442Z",
-      "outageMinutes": 67,
-      "tailMinutes": null
-    },
-    {
-      "provider": "GitHub",
-      "name": "Investigating degraded experiences across GitHub products",
-      "url": "https://stspg.io/5qj9j0p5g4cr",
-      "impact": "critical",
-      "startedAt": "2026-11-25T15:55:19.600Z",
-      "outageMinutes": 57,
-      "tailMinutes": 16
-    },
-    {
-      "provider": "Twilio",
-      "name": "SMS Delivery Delays from Twilio to Multiple Networks in Italy",
-      "url": "https://stspg.io/rp96f6745g5j",
-      "impact": "minor",
-      "startedAt": "2026-11-25T06:49:12.530-08:00",
-      "outageMinutes": 405,
-      "tailMinutes": 114
     }
   ]
 }
